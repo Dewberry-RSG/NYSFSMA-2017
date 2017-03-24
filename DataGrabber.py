@@ -46,8 +46,7 @@ def GetTidePrediction(gage, start, stop):
                 'application':'web_services' }
         
     pred=[];t=[]
-    
-    
+
     r = requests.get(url, params = api_params)
     jdata =r.json()
     
@@ -55,7 +54,6 @@ def GetTidePrediction(gage, start, stop):
         t.append(str(j['t']))
         pred.append(str(j['v']))
 
-        
     colname = str(gage)    
     noaa[colname]= pred
     noaa[colname] = noaa[colname].astype(float)
@@ -86,16 +84,14 @@ def GetTideObservation(gage, start, stop):
                 'application':'web_services' }
         
     pred=[];t=[]
-    
-    
+
     r = requests.get(url, params = api_params)
     jdata =r.json()
     
     for j in jdata['data']:
         t.append(str(j['t']))
         pred.append(str(j['v']))
-
-        
+    
     colname = str(gage)    
     noaa[colname]= pred
     noaa[colname] = noaa[colname].astype(float)
@@ -125,14 +121,12 @@ def Get_USGS(gage, parameter, start, stop):
     data = r.content.decode()
     d = json.loads(data)
     mydict = dict(d['value']['timeSeries'][0])
-        
-    
+
     if params['parameterCD'] == '00060':
         obser = "StreamFlow"
     else:
         obser = "Stage"
         
-    
     # Great, We can pull the station name, and assign to a variable for use later:
     SiteName = mydict['sourceInfo']['siteName']
     print('\n', SiteName)
@@ -182,3 +176,24 @@ def StageFlowPlotter(df_q, df_s, start, stop):
 
     fig.autofmt_xdate()
     ax1.grid()
+
+
+def Q_to_Stage(usgs_gage_id):
+    url = r'https://waterdata.usgs.gov/nwisweb/get_ratings?site_no={}&file_type=exsa'.format(usgs_gage_id)
+    cols = ['INDEP', 'SHIFT','DEP','STOR']
+    usgs_data = pd.read_csv(url, skiprows = 38, sep = '\t', names = cols)
+
+    poly_order = 3
+    xs = np.array(usgs_data['DEP'])
+    ys = np.array(usgs_data['INDEP'])
+
+    coefs    = np.polyfit(xs,ys,poly_order)
+    polynomial = np.poly1d(coefs) 
+    
+    return polynomial
+
+def GetPKFQ(gage):
+    url = 'https://nwis.waterdata.usgs.gov/ny/nwis/peak?site_no={}&agency_cd=USGS&format=hn2'.format(gage)
+    pkf = pd.read_csv(url)
+    pkf.to_csv('return_periods\\{}.pkf'.format(gage), sep='\t', index=False)
+    print('{} Data Saved in return_periods'.format(gage))

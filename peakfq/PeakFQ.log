@@ -1,0 +1,45 @@
+00:00:00.046	frmPeakfq_Load:StartToFile 2017-03-24 11:19:22
+00:00:07.238	FindFile:Finding file: statusMonitor.exe
+00:00:07.238	FindFile:Found file: c:\users\slawler\desktop\nysfsma\peakfq\statusmonitor.exe
+00:00:07.254	Status:MonitorLaunched
+00:00:07.254	WriteStatus:(Begin)
+00:00:07.254	WriteStatus:(Show)
+00:00:07.254	WriteStatus:(Label Title PKFQWin 7.0 )
+00:00:07.254	RunBatchModel:Status Running PeakFQ from C:\Users\slawler\Desktop\NYSFSMA\return_periods using spec file C:\Users\slawler\Desktop\NYSFSMA\return_periods\PKFQWPSF.TMP
+00:00:07.254	WriteStatus:(Running PeakFQ from C:\Users\slawler\Desktop\NYSFSMA\return_periods using spec file C:\Users\slawler\Desktop\NYSFSMA\return_periods\PKFQWPSF.TMP)
+00:00:07.269	RunBatchModel:Status PeakFQ run successfully.
+00:00:07.269	WriteStatus:(PeakFQ run successfully.)
+00:00:07.269	WriteStatus:(Exit)
+00:00:08.642	FindFile:Finding file: statusMonitor.exe
+00:00:08.642	FindFile:Found file: c:\users\slawler\desktop\nysfsma\peakfq\statusmonitor.exe
+00:00:08.658	Status:MonitorLaunched
+00:00:08.658	WriteStatus:(Begin)
+00:00:08.658	WriteStatus:(Show)
+00:00:08.658	WriteStatus:(Label Title PKFQWin 7.0 )
+00:00:08.658	RunBatchModel:Status Running PeakFQ from C:\Users\slawler\Desktop\NYSFSMA\return_periods using spec file C:\Users\slawler\Desktop\NYSFSMA\return_periods\PKFQWPSF.TMP
+00:00:08.658	WriteStatus:(Running PeakFQ from C:\Users\slawler\Desktop\NYSFSMA\return_periods using spec file C:\Users\slawler\Desktop\NYSFSMA\return_periods\PKFQWPSF.TMP)
+00:00:08.673	RunBatchModel:Status PeakFQ run successfully.
+00:00:08.673	WriteStatus:(PeakFQ run successfully.)
+00:00:08.673	WriteStatus:(Exit)
+00:00:14.566	FindFile:Finding file: statusMonitor.exe
+00:00:14.582	FindFile:Found file: c:\users\slawler\desktop\nysfsma\peakfq\statusmonitor.exe
+00:00:14.582	Status:MonitorLaunched
+00:00:14.582	WriteStatus:(Begin)
+00:00:14.582	WriteStatus:(Show)
+00:00:14.582	WriteStatus:(Label Title PKFQWin 7.0 )
+00:00:14.582	RunBatchModel:Status Running PeakFQ from C:\Users\slawler\Desktop\NYSFSMA\return_periods using spec file C:\Users\slawler\Desktop\NYSFSMA\return_periods\PKFQWPSF.TMP
+00:00:14.582	WriteStatus:(Running PeakFQ from C:\Users\slawler\Desktop\NYSFSMA\return_periods using spec file C:\Users\slawler\Desktop\NYSFSMA\return_periods\PKFQWPSF.TMP)
+00:00:14.613	RunBatchModel:Status PeakFQ run successfully.
+00:00:14.613	WriteStatus:(PeakFQ run successfully.)
+00:00:14.613	WriteStatus:(Exit)
+00:00:15.190	FindFile:Finding file: statusMonitor.exe
+00:00:15.190	FindFile:Found file: c:\users\slawler\desktop\nysfsma\peakfq\statusmonitor.exe
+00:00:15.206	Status:MonitorLaunched
+00:00:15.206	WriteStatus:(Begin)
+00:00:15.206	WriteStatus:(Show)
+00:00:15.206	WriteStatus:(Label Title PKFQWin 7.0 )
+00:00:15.206	RunBatchModel:Status Running PeakFQ from C:\Users\slawler\Desktop\NYSFSMA\return_periods using spec file C:\Users\slawler\Desktop\NYSFSMA\return_periods\PKFQWPSF.TMP
+00:00:15.206	WriteStatus:(Running PeakFQ from C:\Users\slawler\Desktop\NYSFSMA\return_periods using spec file C:\Users\slawler\Desktop\NYSFSMA\return_periods\PKFQWPSF.TMP)
+00:00:15.221	RunBatchModel:Status PeakFQ run successfully.
+00:00:15.221	WriteStatus:(PeakFQ run successfully.)
+00:00:15.221	WriteStatus:(Exit)

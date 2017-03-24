@@ -1,0 +1,355 @@
+1
+  Program PeakFq           U. S. GEOLOGICAL SURVEY             Seq.002.000
+  Version 7.1         Annual peak flow frequency analysis      Run Date / Time
+  3/14/2014                                                    03/24/2017 11:19
+
+                         --- PROCESSING OPTIONS ---  
+
+                      Plot option         = None              
+                      Basin char output   = None          
+                      Print option        = Yes
+                      Debug print         = No 
+                      Input peaks listing = Long 
+                      Input peaks format  = WATSTORE peak file  
+
+                      Input files used:
+                         peaks (ascii)  - C:\Users\slawler\Desktop\NYSFSMA\return_periods\01513500.PKF                    
+                         specifications - C:\Users\slawler\Desktop\NYSFSMA\return_periods\PKFQWPSF.TMP                    
+                      Output file(s): 
+                         main - C:\Users\slawler\Desktop\NYSFSMA\return_periods\01513500.PRT                    
+  
+1
+
+
+  Program PeakFq           U. S. GEOLOGICAL SURVEY             Seq.001.001
+  Version 7.1         Annual peak flow frequency analysis      Run Date / Time
+  3/14/2014                                                    03/24/2017 11:19
+  
+               Station - 01513500  SUSQUEHANNA RIVER AT VESTAL NY               
+
+
+                     I N P U T   D A T A   S U M M A R Y
+
+                Number of peaks in record            =       82
+                Peaks not used in analysis           =        2
+                Systematic peaks in analysis         =       80
+                Historic peaks in analysis           =        0
+                Beginning Year                       =     1935
+                Ending Year                          =     2016
+                Historical Period Length             =        0
+                Generalized skew                     =    0.303
+                     Standard error                  =    0.550
+                     Mean Square error               =    0.303
+                Skew option                          =   WEIGHTED  
+                Gage base discharge                  =      0.0
+                User supplied high outlier threshold =   --           
+                User supplied PILF (LO) criterion    =   --           
+                Plotting position parameter          =     0.00
+                Type of analysis                       BULL.17B
+                PILF (LO) Test Method                      GBT 
+                Perception Thresholds            =   Not Applicable
+                Interval Data                    =   Not Applicable
+
+
+
+  *********  NOTICE  --  Preliminary machine computations.        *********     
+  *********  User responsible for assessment and interpretation.  *********     
+
+  **WCF109W-PEAKS WITH MINUS-FLAGGED DISCHARGES WERE BYPASSED.       2
+  **WCF113W-NUMBER OF SYSTEMATIC PEAKS HAS BEEN REDUCED TO NSYS =   80
+    WCF134I-NO SYSTEMATIC PEAKS WERE BELOW GAGE BASE.                   0.0
+    WCF195I-NO LOW OUTLIERS WERE DETECTED BELOW CRITERION.          18842.9
+    WCF163I-NO HIGH OUTLIERS OR HISTORIC PEAKS EXCEEDED HHBASE.    138678.2
+    WCF002J-CALCS COMPLETED.  RETURN CODE =  2
+
+
+                                        Kendall's Tau Parameters
+
+                                                        MEDIAN   No. of
+                                       TAU    P-VALUE    SLOPE   PEAKS
+                                ---------------------------------------
+             SYSTEMATIC RECORD     -0.077      0.313    -68.013    80
+
+
+1
+
+
+  Program PeakFq           U. S. GEOLOGICAL SURVEY             Seq.001.002
+  Version 7.1         Annual peak flow frequency analysis      Run Date / Time
+  3/14/2014                                                    03/24/2017 11:19
+  
+               Station - 01513500  SUSQUEHANNA RIVER AT VESTAL NY               
+
+
+           ANNUAL FREQUENCY CURVE PARAMETERS -- LOG-PEARSON TYPE III 
+
+                        FLOOD BASE                   LOGARITHMIC         
+                  ----------------------  -------------------------------
+                             EXCEEDANCE                STANDARD          
+                   DISCHARGE PROBABILITY     MEAN     DEVIATION     SKEW 
+                  -------------------------------------------------------
+ SYSTEMATIC RECORD       0.0     1.0000     4.7086      0.1474      0.287
+ BULL.17B ESTIMATE       0.0     1.0000     4.7086      0.1474      0.290
+
+ BULL.17B ESTIMATE OF MSE OF AT-SITE SKEW     0.0815
+
+
+
+    ANNUAL FREQUENCY CURVE -- DISCHARGES AT SELECTED EXCEEDANCE PROBABILITIES
+
+   ANNUAL                         <-- FOR BULLETIN 17B ESTIMATES -->
+EXCEEDANCE  BULL.17B SYSTEMATIC   VARIANCE  95% CONFIDENCE INTERVALS
+PROBABILITY ESTIMATE   RECORD      OF EST.       LOWER       UPPER
+
+   0.9950   23390.    23360.        ----      20430.0      26060.0
+   0.9900   24970.    24940.        ----      21990.0      27640.0
+   0.9500   30120.    30110.        ----      27150.0      32800.0
+   0.9000   33480.    33480.        ----      30540.0      36170.0
+   0.8000   38270.    38270.        ----      35370.0      41000.0
+   0.6667   43600.    43610.        ----      40690.0      46470.0
+   0.5000   50290.    50300.        ----      47200.0      53540.0
+   0.4292   53440.    53450.        ----      50200.0      56980.0
+   0.2000   67630.    67630.        ----      63160.0      73120.0
+   0.1000   79710.    79700.        ----      73680.0      87580.0
+   0.0400   95670.    95640.        ----      87120.0     107400.0
+   0.0200  108100.   108000.        ----      97330.0     123200.0
+   0.0100  121000.   120900.        ----     107700.0     140000.0
+   0.0050  134400.   134200.        ----     118400.0     157700.0
+   0.0020  153100.   152900.        ----     133100.0     183000.0
+1
+
+
+  Program PeakFq           U. S. GEOLOGICAL SURVEY             Seq.001.003
+  Version 7.1         Annual peak flow frequency analysis      Run Date / Time
+  3/14/2014                                                    03/24/2017 11:19
+  
+               Station - 01513500  SUSQUEHANNA RIVER AT VESTAL NY               
+
+
+                       I N P U T   D A T A   L I S T I N G
+
+
+    WATER       PEAK   PEAKFQ
+     YEAR      VALUE    CODES  REMARKS
+     1935   -77000.0     H 
+     1936  -107000.0     H 
+     1937    41300.0       
+     1938    47600.0       
+     1939    56200.0       
+     1940    85500.0       
+     1941    53400.0       
+     1942    43900.0       
+     1943    90500.0       
+     1944    53900.0       
+     1945    50400.0       
+     1946    54700.0       
+     1947    58400.0       
+     1948    92400.0       
+     1949    46800.0       
+     1950    59300.0       
+     1951    54500.0       
+     1952    46000.0       
+     1953    41800.0       
+     1954    40600.0       
+     1955    41300.0       
+     1956    64000.0       
+     1957    37400.0       
+     1958    64300.0       
+     1959    53700.0       
+     1960    67600.0       
+     1961    70800.0       
+     1962    59100.0       
+     1963    62600.0       
+     1964    79200.0       
+     1965    24300.0       
+     1966    36800.0       
+     1967    34200.0       
+     1968    43200.0       
+     1969    45000.0       
+     1970    44500.0       
+     1971    37300.0       
+     1972    50400.0       
+     1973    46400.0       
+     1974    40000.0       
+     1975    61500.0       
+     1976    44900.0       
+     1977    59600.0       
+     1978    54200.0       
+     1979    81700.0       
+     1980    44000.0       
+     1981    48700.0       
+     1982    37600.0       
+     1983    53000.0       
+     1984    84200.0       
+     1985    34800.0       
+     1986    73100.0       
+     1987    44800.0       
+     1988    36600.0       
+     1989    41600.0       
+     1990    34400.0       
+     1991    52000.0       
+     1992    24500.0       
+     1993    79400.0       
+     1994    44700.0       
+     1995    25400.0       
+     1996    89100.0       
+     1997    58800.0       
+     1998    54300.0       
+     1999    52900.0       
+     2000    64500.0       
+     2001    45100.0       
+     2002    35800.0       
+     2003    51800.0       
+     2004    77600.0       
+     2005    97000.0       
+     2006   119000.0       
+     2007    55900.0       
+     2008    53100.0       
+     2009    42800.0       
+     2010    53000.0       
+     2011   129000.0       
+     2012    26100.0       
+     2013    34200.0       
+     2014    36400.0       
+     2015    47900.0       
+     2016    32800.0       
+
+
+        Explanation of peak discharge qualification codes
+
+       PeakFQ    NWIS
+        CODE     CODE   DEFINITION
+
+          D        3    Dam failure, non-recurrent flow anomaly
+          G        8    Discharge greater than stated value
+          X       3+8   Both of the above
+          L        4    Discharge less than stated value
+          K     6 OR C  Known effect of regulation or urbanization
+          H        7    Historic peak
+
+          -  Minus-flagged discharge -- Not used in computation
+                -8888.0 -- No discharge value given
+          -  Minus-flagged water year -- Historic peak used in computation
+
+
+
+1
+
+
+  Program PeakFq           U. S. GEOLOGICAL SURVEY             Seq.001.004
+  Version 7.1         Annual peak flow frequency analysis      Run Date / Time
+  3/14/2014                                                    03/24/2017 11:19
+  
+               Station - 01513500  SUSQUEHANNA RIVER AT VESTAL NY               
+
+
+   EMPIRICAL FREQUENCY CURVES -- WEIBULL PLOTTING POSITIONS
+
+   WATER     RANKED   SYSTEMATIC     B17B
+    YEAR   DISCHARGE    RECORD     ESTIMATE
+    2011   129000.0     0.0123      0.0123 
+    2006   119000.0     0.0247      0.0247 
+    2005    97000.0     0.0370      0.0370 
+    1948    92400.0     0.0494      0.0494 
+    1943    90500.0     0.0617      0.0617 
+    1996    89100.0     0.0741      0.0741 
+    1940    85500.0     0.0864      0.0864 
+    1984    84200.0     0.0988      0.0988 
+    1979    81700.0     0.1111      0.1111 
+    1993    79400.0     0.1235      0.1235 
+    1964    79200.0     0.1358      0.1358 
+    2004    77600.0     0.1481      0.1481 
+    1986    73100.0     0.1605      0.1605 
+    1961    70800.0     0.1728      0.1728 
+    1960    67600.0     0.1852      0.1852 
+    2000    64500.0     0.1975      0.1975 
+    1958    64300.0     0.2099      0.2099 
+    1956    64000.0     0.2222      0.2222 
+    1963    62600.0     0.2346      0.2346 
+    1975    61500.0     0.2469      0.2469 
+    1977    59600.0     0.2593      0.2593 
+    1950    59300.0     0.2716      0.2716 
+    1962    59100.0     0.2840      0.2840 
+    1997    58800.0     0.2963      0.2963 
+    1947    58400.0     0.3086      0.3086 
+    1939    56200.0     0.3210      0.3210 
+    2007    55900.0     0.3333      0.3333 
+    1946    54700.0     0.3457      0.3457 
+    1951    54500.0     0.3580      0.3580 
+    1998    54300.0     0.3704      0.3704 
+    1978    54200.0     0.3827      0.3827 
+    1944    53900.0     0.3951      0.3951 
+    1959    53700.0     0.4074      0.4074 
+    1941    53400.0     0.4198      0.4198 
+    2008    53100.0     0.4321      0.4321 
+    1983    53000.0     0.4444      0.4444 
+    2010    53000.0     0.4568      0.4568 
+    1999    52900.0     0.4691      0.4691 
+    1991    52000.0     0.4815      0.4815 
+    2003    51800.0     0.4938      0.4938 
+    1945    50400.0     0.5062      0.5062 
+    1972    50400.0     0.5185      0.5185 
+    1981    48700.0     0.5309      0.5309 
+    2015    47900.0     0.5432      0.5432 
+    1938    47600.0     0.5556      0.5556 
+    1949    46800.0     0.5679      0.5679 
+    1973    46400.0     0.5802      0.5802 
+    1952    46000.0     0.5926      0.5926 
+    2001    45100.0     0.6049      0.6049 
+    1969    45000.0     0.6173      0.6173 
+    1976    44900.0     0.6296      0.6296 
+    1987    44800.0     0.6420      0.6420 
+    1994    44700.0     0.6543      0.6543 
+    1970    44500.0     0.6667      0.6667 
+    1980    44000.0     0.6790      0.6790 
+    1942    43900.0     0.6914      0.6914 
+    1968    43200.0     0.7037      0.7037 
+    2009    42800.0     0.7160      0.7160 
+    1953    41800.0     0.7284      0.7284 
+    1989    41600.0     0.7407      0.7407 
+    1937    41300.0     0.7531      0.7531 
+    1955    41300.0     0.7654      0.7654 
+    1954    40600.0     0.7778      0.7778 
+    1974    40000.0     0.7901      0.7901 
+    1982    37600.0     0.8025      0.8025 
+    1957    37400.0     0.8148      0.8148 
+    1971    37300.0     0.8272      0.8272 
+    1966    36800.0     0.8395      0.8395 
+    1988    36600.0     0.8519      0.8519 
+    2014    36400.0     0.8642      0.8642 
+    2002    35800.0     0.8765      0.8765 
+    1985    34800.0     0.8889      0.8889 
+    1990    34400.0     0.9012      0.9012 
+    1967    34200.0     0.9136      0.9136 
+    2013    34200.0     0.9259      0.9259 
+    2016    32800.0     0.9383      0.9383 
+    2012    26100.0     0.9506      0.9506 
+    1995    25400.0     0.9630      0.9630 
+    1992    24500.0     0.9753      0.9753 
+    1965    24300.0     0.9877      0.9877 
+    1935   -77000.0       --          --    
+    1936  -107000.0       --          --    
+1
+
+
+
+ End PeakFQ analysis.
+   Stations processed :       1
+   Number of errors   :       0
+   Stations skipped   :       0
+   Station years      :      82
+
+
+Data records may have been ignored for the stations listed below.               
+(Card type must be Y, Z, N, H, I, 2, 3, 4,  or *.)                              
+(2, 4, and * records are ignored.)                                              
+                                                                                
+ For the station below, the following records were ignored:                     
+                                                                                
+ FINISHED PROCESSING STATION:  01513500       USGS SUSQUEHANNA RIVER AT VESTAL N
+                                                                                
+                                                                                
+ For the station below, the following records were ignored:                     
+                                                                                
+ FINISHED PROCESSING STATION:                                                   
+                                                                                
