@@ -6,6 +6,7 @@ Created on Thu Feb  2 16:16:29 2017
 """
 
 import pandas as pd
+import numpy as np
 import requests
 import json
 from datetime import datetime
@@ -29,7 +30,7 @@ def GetTidePrediction(gage, start, stop):
     #--NOAA API https://tidesandcurrents.noaa.gov/api/
     datum     = "msl"   #"NAVD"                  #Datum
     units     = "english"                         #Units
-    time_zone = "gmt"                         #Time Zone
+    time_zone = "lst_ldt"                         #Time Zone
     fmt       = "json"                            #Format
     url       = 'http://tidesandcurrents.noaa.gov/api/datagetter'
     product   = 'predictions'                     #Product
@@ -66,13 +67,13 @@ def GetTidePrediction(gage, start, stop):
 def GetTideObservation(gage, start, stop):   
     #--NOAA API https://tidesandcurrents.noaa.gov/api/
     datum     = "msl"   #"NAVD"                  #Datum
-    units     = "metric"                         #Units
-    time_zone = "gmt"                         #Time Zone
+    units     = "english"                         #Units
+    time_zone = "lst_ldt"                         #Time Zone
     fmt       = "json"                            #Format
     url       = 'http://tidesandcurrents.noaa.gov/api/datagetter'
-    product   = 'water_level'                     #Product
+    product   = 'hourly_height'                     #Product
     
-    noaa_time_step = '6T'
+    noaa_time_step = '60T'
     noaa = pd.DataFrame()
     gages = dict()
     
@@ -102,7 +103,7 @@ def GetTideObservation(gage, start, stop):
     return noaa
 
     
-def Get_USGS(gage, parameter, start, stop):  
+def Get_USGS_Instant(gage, parameter, start, stop):  
                
     dformat    = "json"                                  # Data Format  
     url        = 'http://waterservices.usgs.gov/nwis/iv' # USGS API
@@ -165,8 +166,8 @@ def StageFlowPlotter(df_q, df_s, start, stop):
     y2 = df_s['Stage']
 
     fig, ax1 = plt.subplots()
+    ax1.set_ylabel(y1.name, color='r')    
     ax1.plot(x, y1, 'r')
-    ax1.set_ylabel(y1.name, color='r')
     ax1.set_xlabel('Time')
 
     ax2 = ax1.twinx()
@@ -197,3 +198,78 @@ def GetPKFQ(gage):
     pkf = pd.read_csv(url)
     pkf.to_csv('return_periods\\{}.pkf'.format(gage), sep='\t', index=False)
     print('{} Data Saved in return_periods'.format(gage))
+
+
+def Get_USGS_Daily(gage):  
+    url = 'https://waterdata.usgs.gov/nwis/dv?cb_00060=on&format=rdb&site_no={}&referred_module=sw&period=&begin_date=1900-01-01&end_date=2020-01-01'.format(gage)
+    df = pd.read_csv(url, skiprows=64, sep = '\t')
+    df.drop(0, axis=0, inplace=True)
+    y = df['peak_va'].astype(float)
+    x = df['peak_dt']
+    x = pd.to_datetime(x, format= '%Y-%m-%d')
+    y.index = x
+    return y  
+
+
+def GotoUSGS(state):
+    url = 'https://waterdata.usgs.gov/nwis/uv?referred_module=sw&state_cd={}&site_tp_cd=OC&site_tp_cd=OC-CO&site_tp_cd=ES&site_tp_cd=LK&site_tp_cd=ST&site_tp_cd=ST-CA&site_tp_cd=ST-DCH&site_tp_cd=ST-TS&format=station_list'.format(state)
+    return url
+
+def GotoNOAA():
+    url = 'https://tidesandcurrents.noaa.gov/stations.html?type=Water+Levels'
+    return url    
+
+def GetURL(gage):
+    url = 'https://waterdata.usgs.gov/nwis/dv?cb_00060=on&format=rdb&site_no={}&referred_module=sw&period=&begin_date=1900-03-23&end_date=2020-03-23'.format(gage)
+    return url
+
+def plot1(df1, df4, df5, Tides_Only):
+    fig, ax1 = plt.subplots()
+    ax1.set_ylabel('Stage: Tidal', color='black')    
+    ax1.plot(df4.index, df4[Tides_Only], 'r')
+    ax1.plot(df5.index, df5[Tides_Only], 'b')
+
+    ax1.set_xlabel('Time')
+    fig.autofmt_xdate()
+    axes = plt.gca()
+    axes.grid()
+
+
+    ax2 = ax1.twinx()
+    ax2.plot(df1['datetime'],df1['Stage'], 'black')
+    ax2.set_ylabel('Stage: Fluvial', color='black')  
+    axes.set_xlim([df4.index[0],df4.index[-1]])
+
+def plot2(df2, df4, df5, Tides_Only):
+    fig, ax1 = plt.subplots()
+    ax1.set_ylabel('Stage: Tidal', color='black')    
+    ax1.plot(df4.index, df4[Tides_Only], 'r')
+    ax1.plot(df5.index, df5[Tides_Only], 'b')
+
+    ax1.set_xlabel('Time')
+    fig.autofmt_xdate()
+    axes = plt.gca()
+    axes.grid()
+
+
+    ax2 = ax1.twinx()
+    ax2.plot(df2['datetime'],df2['Stage'], 'black')
+    ax2.set_ylabel('Stage: Fluvial', color='black')  
+    axes.set_xlim([df4.index[0],df4.index[-1]])
+
+def plot3(df3, df4, df5, Tides_Only):
+    fig, ax1 = plt.subplots()
+    ax1.set_ylabel('Stage: Tidal', color='black')    
+    ax1.plot(df4.index, df4[Tides_Only], 'r')
+    ax1.plot(df5.index, df5[Tides_Only], 'b')
+
+    ax1.set_xlabel('Time')
+    fig.autofmt_xdate()
+    axes = plt.gca()
+    axes.grid()
+
+
+    ax2 = ax1.twinx()
+    ax2.plot(df3['datetime'],df3['Stage'], 'black')
+    ax2.set_ylabel('Stage: Fluvial', color='black')  
+    axes.set_xlim([df4.index[0],df4.index[-1]])
