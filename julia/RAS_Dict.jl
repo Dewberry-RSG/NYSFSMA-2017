@@ -1,0 +1,10 @@
+dict=Dict("Banans_Camp.csv"=>3.2,"Bayou_Blue_Bobcat.csv"=>5.6, "Bayou_Boeuf_School.csv"=>2.4,
+		  "Bowie.csv"=>3.6,"Butch_Hill.csv"=>3.5,"Chackbay_101_water_tower.csv"=>2.0,
+		  "Clotilda.csv"=>3.5,"Cyprien.csv"=>2.5,"District_1_of_12.csv"=>3.5,"District_2_of_12.csv"=>3.5,
+		  "District_3_of_12.csv"=>4.5,"District_4_of_12.csv"=>4.5,"Eymard_Rodrigue.csv"=>3.0,
+		  "Fantastic_Acres_Coastal.csv"=>3.0,"Farmers_Lane_Rodrigue.csv"=>3.2,"Four_Point_Drive_elevation.csv"=>3.0,
+		  "Homeplace.csv"=>3.5,"Humble.csv"=>1.8,"Jesse_Dufrene.csv"=>4.5,"LaButte.csv"=>3.5,"Lefort.csv"=>3.5,
+		  "Legendre_Mikes.csv"=>3.5,"Lockport_To_Larose.csv"=>5.0,"Martinez_Rond_Pom_Pon.csv"=>3.0,
+		  "McCloud.csv"=>4.2,"Natural_Gas.csv"=>4.0,"New_Valentine_Ludevine.csv"=>3.5,"Old_Valentine.csv"=>2.5,
+		  "Peltier.csv"=>3.5,"Rink_Choctaw_Fire_Station.csv"=>3.7,"Rita.csv"=>4.2,"Sixth_Ward_Middle_School.csv"=>3.0,
+		  "T_Bois.csv"=>4.0,"Thoroughbred_Supercharge.csv"=>6.0,"Twin_Oaks.csv"=>3.0,"Zeller_Larousse.csv"=>3.0)       

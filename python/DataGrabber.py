@@ -202,18 +202,21 @@ def GetPKFQ(gage):
 
 def Get_USGS_Daily(gage):  
     url = 'https://waterdata.usgs.gov/nwis/dv?cb_00060=on&format=rdb&site_no={}&referred_module=sw&period=&begin_date=1900-01-01&end_date=2020-01-01'.format(gage)
-    df = pd.read_csv(url, skiprows=64, sep = '\t')
+    df = pd.read_csv(url, skiprows=29, sep = '\t')
     df.drop(0, axis=0, inplace=True)
-    y = df['peak_va'].astype(float)
-    x = df['peak_dt']
+    df.head()
+    df.rename(columns = {'105471_00060_00003':'StreamFlow'}, inplace=True)
+    y = df['StreamFlow'].astype(float)
+    x = df['datetime']
     x = pd.to_datetime(x, format= '%Y-%m-%d')
     y.index = x
-    return y  
+    return pd.DataFrame(y)  
 
 
 def GotoUSGS(state):
     url = 'https://waterdata.usgs.gov/nwis/uv?referred_module=sw&state_cd={}&site_tp_cd=OC&site_tp_cd=OC-CO&site_tp_cd=ES&site_tp_cd=LK&site_tp_cd=ST&site_tp_cd=ST-CA&site_tp_cd=ST-DCH&site_tp_cd=ST-TS&format=station_list'.format(state)
-    return url
+    print("\nCLICK HERE FOR USGS GAGES: \n", url)
+    print("\nCLICK HERE FOR MAP: \n", 'https://maps.waterdata.usgs.gov/mapper/index.html')
 
 def GotoNOAA():
     url = 'https://tidesandcurrents.noaa.gov/stations.html?type=Water+Levels'
