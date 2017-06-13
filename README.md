@@ -2,10 +2,10 @@
 
 ### Materials for a Dewberry Presentation at the New York State Floodplain and Stormwater Managers Association
 
-#### Contents (More to come)
-1. [Gage Explorer](GageExplorer.ipynb): Notebook for identifying, exploring, and visualizing available USGS streamgage data for a given study area.
+#### [Presentation (local copy)](Presentation_local.ipynb)
 
-2. [Data Grabber](DataGrabber.py): Functions used in the Gage Explorer Notebook. Functions written to a seperate file for ease of use. 
+#### [Presentation (web version)](Presentation_web.ipynb)
+
 
 # Presentation Details
 
