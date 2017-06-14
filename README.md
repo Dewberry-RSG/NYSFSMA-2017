@@ -2,9 +2,9 @@
 
 ### Materials for a Dewberry Presentation at the New York State Floodplain and Stormwater Managers Association
 
-#### [Presentation (local copy)](Presentation_local.ipynb)
+#### [Presentation (local copy)](presentations/Presentation_local.ipynb)
 
-#### [Presentation (web version)](Presentation_web.ipynb)
+#### [Presentation (web version)](presentations/Presentation_web.ipynb)
 
 
 # Presentation Details
